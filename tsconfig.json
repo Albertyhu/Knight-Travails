@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2016",
     "lib": [
       "dom",
       "dom.iterable",
@@ -13,12 +13,20 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react",
+    "rootDir": "./src",
+    "outDir": "./public",
+    "removeComments": true,
+    "noEmitOnError": true,
+    "sourceMap": true,
+
+    //to make certain dependencies like styled-components work
+    "noImplicitAny": false
   },
   "include": [
     "src"

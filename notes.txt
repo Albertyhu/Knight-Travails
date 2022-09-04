@@ -1,0 +1,3 @@
+Running this app can tend to use far beyond the allocated heap memmory. You have to go into
+package.json to change the following line: 
+"build": "react-scripts --max_old_space_size=4096 build""
