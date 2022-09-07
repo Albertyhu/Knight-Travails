@@ -189,4 +189,8 @@ describe("Text with 8x8 board", () => {
         expect(arr).toEqual(expectedArr)
         //console.log(arr)
     })
+    it("Test KnightMove function", () => {
+        var arr = Knight.knightMove([3, 5], [3, 7]);
+        console.log(arr)
+    })
 })

@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\asset",
     "\\src\\components",
     "\\src\\global"
   ],
-  "SelectedNode": "\\src\\components\\knightPath.tsx",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

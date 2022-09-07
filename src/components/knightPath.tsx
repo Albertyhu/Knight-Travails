@@ -10,7 +10,7 @@ interface KnightPathFormat{
     boardSize: number; 
     generateOptions(currentCoor: Coordinate, pathHistory: Coordinate[]): Coordinate[] | void;  
     execute(): void; 
-    
+    knightMove(starting: [number, number], ending: [number, number]): void; 
 }
 
 export class KnightPath implements KnightPathFormat {
@@ -159,6 +159,29 @@ export class KnightPath implements KnightPathFormat {
             this.generateAllPaths(this.firstStep, opt)
         })
         return this.findShortestRoute(); 
+    }
+    knightMove(starting, ending) {
+        this.reset();
+        var firstLocation = {
+            x: starting[0],
+            y: starting[1],
+        }
+        var lastLocation = {
+            x: ending[0],
+            y: ending[1],
+        }
+
+        this.setFirstLocation(firstLocation);
+        this.setFinalLocation(lastLocation); 
+        var arr = this.execute(); 
+        var moveArr: Array<any> = []
+        arr.forEach(val => {
+            var move: number[] = []; 
+            move.push(val.x)
+            move.push(val.y)
+            moveArr.push(move)
+        })
+        return moveArr; 
     }
     reset() {
         this.allPossiblePaths = []; 
